@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+html,
+body {
+    font-family: "Cinzel", Gabriola, sans-serif;
+    margin: 0;
+    color: #242c39;
+}
+
+.mt-50 {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.nav {
+    height: 100px;
+    background-color: #242c39;
+}
+
+a {
+    text-decoration: none;
+    color: #f4f6f7;
+}
+
+.nav ul {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    font-weight: 600;
+}
+
+.header {
+    height: 190px;
+    background-color: #f4f6f7;
+    text-align: center;
+    padding: 40px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.header p {
+    margin: 0;
+    width: 50%;
+    margin: auto;
+}
+
+.header img {
+    padding: 10px;
+}
+
+main {
+    text-align: center;
+}
+
+main p {
+    width: 50%;
+    margin: auto;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.coffee-card {
+    background-color: #242c39;
+    color: #f4f6f7;
+    width: 28%;
+}
+
+.store-card {
+    background-color: #242c39;
+    color: #f4f6f7;
+    width: 30%;
+    padding: 20px;
+}
+
+.coffee-card p {
+    font-size: 12px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.store-card p {
+    font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.store-card h2 {
+    margin: 0;
+}
+
+.store-card h3 {
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.footer {
+    height: 15px;
+    background-color: #f4f6f7;
+    padding: 40px;
+    margin-top: 50px;
+    color: #242c39;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer ul {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    font-weight: 600;
+}
+
+.footer a {
+    color: #242c39;
+}
+
+.nav-sec {
+    width: 60%;
+}
+.nav-social {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+}
+
+.nav-social svg {
+    padding: 10px;
+}
+
+.copy {
+    background-color: #f4f6f7;
+    color: #242c39;
+    text-align: center;
+    margin: 0px;
+    font-size: 12px;
+}
