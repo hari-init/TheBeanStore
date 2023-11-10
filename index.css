@@ -1,3 +1,7 @@
+/* The fonts are taken from google fonts
+    https://fonts.googleapis.com/css?family=Cinzel
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Cinzel');
 
 html,
@@ -13,6 +17,8 @@ body {
 }
 
 .nav {
+    display: flex;
+    align-items: center;
     height: 100px;
     background-color: #242c39;
 }
@@ -32,6 +38,14 @@ a {
     height: 100%;
     align-items: center;
     font-weight: 600;
+    width: 90%;
+}
+
+.nav div {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
 }
 
 .header {
@@ -138,6 +152,7 @@ footer ul {
 .nav-sec {
     width: 60%;
 }
+
 .nav-social {
     width: 40%;
     display: flex;
@@ -154,4 +169,95 @@ footer ul {
     text-align: center;
     margin: 0px;
     font-size: 12px;
+}
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+
+.product {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    background-color: #f4f6f7;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.product img {
+    width: 100px;
+    height: 100px;
+}
+
+.product span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.product span img {
+    width: 30px;
+    height: 30px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.actions img {
+    width: 20px;
+    height: 24px;
+}
+
+.actions input {
+    width: 16px;
+    margin: 0px;
+    border: 0px;
+    background-color: #f4f6f7;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.type_container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.type_container .image_container {
+    width: 40%;
+}
+
+.type_container .description {
+    flex-direction: column;
+    width: 60%;
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+}
+
+#type_image {
+    width: 120px;
+    height: 120px;
+}
+
+.details-header {
+    display: flex;
+    align-items: center;
+    height: 190px;
+    background-color: #f4f6f7;
+    text-align: center;
+    padding: 40px;
 }

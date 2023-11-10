@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        The bean store is a title i am going with my website name,
+        and also i attaching the title favicon which is location in the images folder.
+    -->
+    <!--The icons are taken from the flaticon 
+        ref: https://www.flaticon.com/free-icon/coffee-beans_3219300,
+        ref: https://www.flaticon.com/free-icon/coffee-cup_1047462
+    -->
+    <link rel="icon" type="image/svg+xml" href="images/coffee-cup.svg" sizes="any">
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="./index.js"></script>
+</head>
+
+<body>
+    <nav class="nav">
+        <!--Navigation with plain routing-->
+        <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./products.html">PRODUCTS</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <div>
+            <img src="./assets/cart.svg" />
+            <img src="./assets/user.svg" />
+        </div>
+    </nav>
+    <header class="details-header">
+        <div class="type_container">
+            <div class="image_container">
+                <img id="type_image" />
+            </div>
+            <div class="description">
+                <h2 id="type_name"></h2>
+                <p id="type_desc"></p>
+            </div>
+        </div>
+    </header>
+    <script>
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     const type = new URLSearchParams(window.location.search).get('type');
+        //     document.title = `${type}: The Bean Store`;
+        //     document.querySelector('#type_image').src = `./assets/${type}.svg`
+        //     document.querySelector('#type_name').textContent = type;
+        //     document.querySelector('#type_desc').textContent = 'where bold espresso meets the velvety embrace of frothy milk, crowned with a dusting of cocoa; a symphony of flavors in every sip';
+        // });
+    </script>
+</body>
+
+</html>

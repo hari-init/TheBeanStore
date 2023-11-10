@@ -1,0 +1,44 @@
+{
+   "data": [
+    {
+        "name": "marocchino",
+        "desc": "where bold espresso meets the velvety embrace of frothy milk, crowned with a dusting of cocoa; a symphony of flavors in every sip",
+        "src": "./assets/marocchino.svg"
+    },
+    {
+        "name": "americano",
+        "desc": "where bold espresso meets the velvety embrace of frothy milk, crowned with a dusting of cocoa; a symphony of flavors in every sip",
+        "src": "./assets/americano.svg"
+    },
+    {
+        "name": "cappuccino",
+        "desc": "where bold espresso meets the velvety embrace of frothy milk, crowned with a dusting of cocoa; a symphony of flavors in every sip",
+        "src": "./assets/cappuccino.svg"
+    },
+    {
+        "name": "cortado",
+        "desc": "where bold espresso meets the velvety embrace of frothy milk, crowned with a dusting of cocoa; a symphony of flavors in every sip",
+        "src": "./assets/cortado.svg"
+    },
+    {
+        "name": "frappe",
+        "desc": "where bold espresso meets the velvety embrace of frothy milk, crowned with a dusting of cocoa; a symphony of flavors in every sip",
+        "src": "./assets/frappe.svg"
+    },
+    {
+        "name": "irish",
+        "desc": "where bold espresso meets the velvety embrace of frothy milk, crowned with a dusting of cocoa; a symphony of flavors in every sip",
+        "src": "./assets/irish.svg"
+    },
+    {
+        "name": "latte macchiato",
+        "desc": "where bold espresso meets the velvety embrace of frothy milk, crowned with a dusting of cocoa; a symphony of flavors in every sip",
+        "src": "./assets/latte_macchiato.svg"
+    },
+    {
+        "name": "mocha",
+        "desc": "where bold espresso meets the velvety embrace of frothy milk, crowned with a dusting of cocoa; a symphony of flavors in every sip",
+        "src": "./assets/mocha.svg"
+    }
+]
+}
