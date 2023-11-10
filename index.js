@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("./type.JSON")
+    fetch("./type.json")
 .then(res => res.json())
 .then(data => console.log(data))
     const $ = (selector) => document.querySelector(selector);
