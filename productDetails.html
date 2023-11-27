@@ -12,9 +12,9 @@
         ref: https://www.flaticon.com/free-icon/coffee-beans_3219300,
         ref: https://www.flaticon.com/free-icon/coffee-cup_1047462
     -->
-    <link rel="icon" type="image/svg+xml" href="images/coffee-cup.svg" sizes="any">
-    <link rel="stylesheet" href="index.css">
-    <script type="text/javascript" src="./index.js"></script>
+    <link rel="icon" type="image/svg+xml" href="./assets/coffee-cup.svg" sizes="any">
+    <link rel="stylesheet" href="./index.css">
+
 </head>
 
 <body>
@@ -23,11 +23,14 @@
         <ul>
             <li><a href="./index.html">HOME</a></li>
             <li><a href="./products.html">PRODUCTS</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
         </ul>
         <div>
-            <img src="./assets/cart.svg" />
+            <div  class="cart-icon" onclick="goToCart()">
+                <span class="items-count">0</span>
+                <img src="./assets/cart.svg" />
+            </div>
             <img src="./assets/user.svg" />
         </div>
     </nav>
@@ -42,15 +45,86 @@
             </div>
         </div>
     </header>
-    <script>
-        // document.addEventListener("DOMContentLoaded", () => {
-        //     const type = new URLSearchParams(window.location.search).get('type');
-        //     document.title = `${type}: The Bean Store`;
-        //     document.querySelector('#type_image').src = `./assets/${type}.svg`
-        //     document.querySelector('#type_name').textContent = type;
-        //     document.querySelector('#type_desc').textContent = 'where bold espresso meets the velvety embrace of frothy milk, crowned with a dusting of cocoa; a symphony of flavors in every sip';
-        // });
-    </script>
+    <section>
+        <div class="modify">
+            <div class="sizes">
+                <h3>Size Options</h3>
+                <div class="cups" onclick="selectCupSize(event)">
+                    <span id="s">
+                        <img class="s" src="./assets/coffee-cup.svg" />
+                        <h3>Small</h3>
+                        <p>250 ml</p>
+                    </span>
+                    <span id="m">
+                        <img class="m" src="./assets/coffee-cup.svg" />
+                        <h3>Medium</h3>
+                        <p>360 ml</p>
+                    </span>
+                    <span id="l">
+                        <img class="l" src="./assets/coffee-cup.svg" />
+                        <h3>Large</h3>
+                        <p>470 ml</p>
+                    </span>
+                    <span id="xl" class="selected">
+                        <img class="xl" src="./assets/coffee-cup.svg" />
+                        <h3>Extra-Large</h3>
+                        <p>590 ml</p>
+                    </span>
+                </div>
+            </div>
+            <div class="options">
+                <h3>Customization</h3>
+                <div>
+                    <p>Foam</p>
+                    <select name="Foam" id="foam">
+                        <option>Milk Foam</option>
+                        <option>Light Foam</option>
+                        <option>NO Foam</option>
+                        <option>Extra Foam</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Milk</p>
+                    <select name="Milk" id="milk">
+                        <option>Coconut Beverage</option>
+                        <option>Heavy Cream</option>
+                        <option>Lactose-Free Beverage</option>
+                        <option>Vanilla Sweet Cream</option>
+                        <option>Nonfat Milk</option>
+                        <option>2% Milk</option>
+                        <option>Whole Milk</option>
+                        <option>Almond Beverage</option>
+                        <option>Oat Beverage</option>
+                        <option>Soy Beverage</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Temperature</p>
+                    <select name="temp" id="temp">
+                        <option>Hot</option>
+                        <option>Extra Hot</option>
+                        <option>Warm</option>
+                        <option>Cold</option>
+                        <option>Iced</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button class="addToCart">
+        <h3>
+            <span onclick="addProductToCart()">Add To Cart</span>
+        </h3>
+        <h3>|</h3>
+        <h3>
+            <div  class="cart-icon" onclick="goToCart()">
+                <span class="items-count">0</span>
+                <img src="./assets/cart.svg" />
+            </div>
+        </h3>
+    </button>
+    <div class="toast">Added to cart</div>
+    <script type="text/javascript" src="./productDetails.js"></script>
 </body>
 
 </html>

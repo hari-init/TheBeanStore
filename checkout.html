@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        The bean store is a title i am going with my website name,
+        and also i attaching the title favicon which is location in the images folder.
+    -->
+    <title>The Bean Store</title>
+    <!--The icons are taken from the flaticon 
+        ref: https://www.flaticon.com/free-icon/coffee-beans_3219300,
+        ref: https://www.flaticon.com/free-icon/coffee-cup_1047462
+    -->
+    <link rel="icon" type="image/svg+xml" href="./assets/coffee-cup.svg" sizes="any">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <header class="cartHeader" onclick="goToHome()">
+        <img src="./assets/back.svg" />
+        <h3>Back to Cart</h3>
+    </header>
+    <main>
+        <div class="cart">
+            <div class="shipping">
+                <div class="shippingContainer">
+                    <h3>Customer Details</h3>
+                    <span class="name">
+                        <span>
+                            <label for="name">Name<span class="required">*</span> </label>
+                            <input id="name" type="text" placeholder="Receiver Name" />
+                            <p class="errorText" id="nameError"></p>
+                        </span>
+                        <span>
+                            <label for="tel">Mobile<span class="required">*</span></label>
+                            <input id="tel" type="text" minlength="12" maxlength="12" placeholder="123 456 7890"/>
+                            <p class="errorText" id="telError"></p>
+                        </span>
+                    </span>
+                    <h3>Shipping Details</h3>
+                    <span class="address">
+                        <span>
+                            <label for="address1">Address Line 1 <span class="required">*</span></label>
+                            <input id="address1" placeholder="enter Address line 1" />
+                            <p class="errorText" id="add1Error"></p>
+                        </span>
+                        <span>
+                            <label for="address2">Address Line 2</label>
+                            <input id="address2" placeholder="enter Address line 2" />
+                            <p class="errorText" id="add2Error"></p>
+                        </span>
+                    </span>
+                    <span class="area">
+                        <span>
+                            <label for="province">Province<span class="required">*</span></label>
+                            <!-- <input id="province" type="select" placeholder="enter province" /> -->
+                            <select name="province" id="province">
+                                <option value="ON">Ontario</option>
+                              </select>
+                              <p class="errorText" id="provinceError"></p>
+                        </span>
+                        <span>
+                            <label for="city">city <span class="required">*</span></label>
+                            <select name="city" id="city">
+                                <option value="Brantford">Brantford</option>
+                              </select>
+                            <p class="errorText" id="cityError"></p>
+                        </span>
+                        <span>
+                            <label for="postalCode">Postal code <span class="required">*</span></label>
+                            <input id="postalCode" placeholder="enter postal Code"  maxlength="7"/>
+                            <p class="errorText" id="postalError"></p>
+                        </span>
+                    </span>
+                    <h3>Payment Details</h3>
+                    <label for="payment">Payment <span class="required">*</span></label>
+                    <select name="payment" id="payment">
+                        <option value="GC">Gift card</option>
+                        <option value="BB">Bean Bucks</option>
+                      </select>
+                    <p class="errorText" id="paymentError"></p>
+                </div>
+            </div>
+            <div class="checkout">
+                <div>
+                    <h3>checkout</h3>
+                    <div class="listItem">
+                    </div>
+                    <div class="cktCtn">
+                        <div class="total">
+                            <h3>Total</h3>
+                            <h3 class="cost">$ 0</h3>
+                        </div>
+                        <div class="btnContainer" onclick="goToSuccess()">
+                            <button class="checkoutBt">
+                                Place Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="./checkout.js"></script>
+</body>
+
+</html>
+
+<!-- <img src="./assets/minus.svg" alt="">
+<input  value="${element.qty}"/>
+<img src="./assets/plus.svg" alt=""> -->

@@ -4,53 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--
-        The bean store is a title i am going with my website name,
-        and also i attaching the title favicon which is location in the images folder.
-    -->
     <title>The Bean Store</title>
-    <!--The icons are taken from the flaticon 
-        ref: https://www.flaticon.com/free-icon/coffee-beans_3219300,
-        ref: https://www.flaticon.com/free-icon/coffee-cup_1047462
-    -->
-    <link rel="icon" type="image/svg+xml" href="images/coffee-cup.svg" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="assets/coffee-cup.svg" sizes="any">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <nav class="nav">
-        <!--Navigation with plain routing-->
         <ul>
             <li><a href="./index.html">HOME</a></li>
             <li><a href="./products.html">PRODUCTS</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
         </ul>
         <div>
-            <img src="./assets/cart.svg" />
-            <img src="./assets/user.svg" />
+            <div  class="cart-icon" onclick="goToCart()">
+                <span class="items-count">0</span>
+                <img src="./assets/cart.svg" />
+            </div>
+            <div class="userIcon" onclick="showLog()">
+                <img src="./assets/user.svg" />
+                <div class="logs" onclick="userAction(event)">login</div>
+            </div>
         </div>
     </nav>
     <header class="header">
         <h1 class="store-name">The Bean Store.</h1>
         <!--using coffee-cup.svg as a main logo-->
-        <img src="images/coffee-cup.svg" alt="coffeeCup" width="100px" />
+        <img src="assets/coffee-cup.svg" alt="coffeeCup" width="100px" />
         <p>Discover the perfect blend of taste and tranquility at our store.
             Sip, savor, and find your moment of calm in every cup.</p>
     </header>
-    <main>
-        <h2>Our taste</h2>
-        <p>At our coffee shop, we're dedicated to crafting the perfect cup of coffee, where every sip is a journey
-            through flavor and quality.</p>
-        <h2 class="mt-50">The Types we serve.</h2>
+    <main class="home">
+        <section class="promotion">
+            <div class="promo-card">
+                <img src="./assets/snow.svg" />
+                <img src="./assets/snow.svg" />
+                <img src="./assets/snow.svg" />
+                <img src="./assets/tree.svg" />
+                <h1>Celebrate the Season with Savings!</h1>
+                <p>Enjoy a festive 20% off on all orders above $20! 🎁</p>
+            </div>
+            <!-- <div class="promo-card">
+                <h3>hello</h3>
+            </div>
+            <div class="promo-card">
+                <h3>hello</h3>
+            </div> -->
+        </section>
+        <!-- <section class="home-space"> -->
+        <!-- <h2>Our taste</h2>
+            <p>At our coffee shop, we're dedicated to crafting the perfect cup of coffee, where every sip is a journey
+                through flavor and quality.</p> -->
+        <!-- </section> -->
         <div class="cards">
             <section class="coffee-card">
-                <h3>Drip Coffee</h3>
-                <img src="images/coffee-beans.svg" alt="coffeeCup" width="80px" />
-                <p>Celebrate the simple pleasure of life with each drip, as the finest beans transform into your daily
-                    moment of comfort and delight.</p>
+                <h2>Ready to savor the extraordinary? Click "Shop Now" and let the coffee adventure unfold!</h2>
+                <div class="btnContainer">
+                    <button class="backToHome" onclick="goToProducts()">
+                        Shop now
+                    </button>
+                </div>
+                <span>
+                    <div class="product">
+                        <img src="./assets/americano.svg" />
+                    </div>
+                    <div class="product">
+                        <img src="./assets/frappe.svg" />
+                    </div>
+                    <div class="product">
+                        <img src="./assets/marocchino.svg" />
+                    </div>
+                    <div class="product">
+                        <img src="./assets/mocha.svg" />
+                    </div>
+                    <div class="product">
+                        <img src="./assets/irish.svg" />
+                    </div>
+                    <div class="product">
+                        <img src="./assets/cortado.svg" />
+                    </div>
+                </span>
             </section>
-            <section class="coffee-card">
+            <!-- <section class="coffee-card">
                 <h3>Moka Pot Coffee</h3>
                 <img src="images/coffee-beans.svg" alt="coffeeCup" width="80px" />
                 <p>Unlock the hidden melodies of coffee as the Moka pot serenades your senses with rich, dark notes in
@@ -61,7 +97,7 @@
                 <img src="images/coffee-beans.svg" alt="coffeeCup" width="80px" />
                 <p>Savor the timeless delight of Turkish coffee, where each cup holds a thousand stories, whispered by
                     the grounds settled at the bottom.</p>
-            </section>
+            </section> -->
         </div>
         <h2 class="mt-50">Our Stores.</h2>
         <div class="cards">
@@ -79,13 +115,14 @@
             </section>
         </div>
     </main>
-    <footer class="footer">
+
+    <footer class="footer mtop-50">
         <div class="nav-sec">
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PRODUCTS</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./products.html">PRODUCTS</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
             </ul>
         </div>
         <div class="nav-social">
@@ -113,7 +150,8 @@
             </svg>
         </div>
     </footer>
-    <p class="copy">Made with Love by Hariharan ❤️🍽️☕</p>
+    <a href="https://hariravi.web.app" target="_blank"><p class="copy">crafted by Hariharan</p></a>
+    <script type="text/javascript" src="./index.js"></script>
 </body>
 
 </html>

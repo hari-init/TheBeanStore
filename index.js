@@ -1,15 +1,44 @@
+const $ = (selector) => document.querySelector(selector);
+const $all = (selector) => document.querySelectorAll(selector);
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("./type.json")
-.then(res => res.json())
-.then(data => console.log(data))
-    const $ = (selector) => document.querySelector(selector);
-    const type = new URLSearchParams(window.location.search).get('type');
-    type && (document.title = `${type}: The Bean Store`);
-    $('#type_image') && ($('#type_image').src = `./assets/${type}.svg`);
-    $('#type_name') && ($('#type_name').textContent = type);
-    $('#type_desc') && ($('#type_desc').textContent = 'where bold espresso meets the velvety embrace of frothy milk, crowned with a dusting of cocoa; a symphony of flavors in every sip');
+    localStorage.getItem('cart') && $all('.items-count').forEach((el, i) => {
+        el.innerText = JSON.parse(localStorage.getItem('cart')).length
+    })
+    $('.logs') && ($('.logs').style.display = 'none');
 });
 
-const goToDetailsPage = (name) => {
-    window.location.href = `./productDetails.html?type=${name}`
+const goToProducts = () => {
+    window.location.href = `./products.html`
+}
+
+const goToCart = () => {
+    window.location.href = `./cart.html`
+}
+
+const goToHome = () => {
+    window.history.back();
+}
+
+const showLog = () => {
+    if ($('.logs').checkVisibility()) {
+        $('.logs').style.display = 'none';
+    } else {
+        if(localStorage.getItem('user')) {
+            $('.logs').innerText = 'logout'
+        } else {
+            $('.logs').innerText = 'login'
+        }
+        $('.logs').style.display = 'block';
+    }
+}
+
+const userAction = (event) => {
+if(event.target.innerText === 'logout') {
+    localStorage.removeItem('user');
+    localStorage.removeItem('cart');
+    window.location.reload();
+} else {
+    $('.logs').style.display = 'none';
+    window.location.href = './userSignUp.html?login'
+}
 }

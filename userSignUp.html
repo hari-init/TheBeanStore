@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bean Store</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/coffee-cup.svg" sizes="any">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <header class="checkoutHeader" onclick="goToHome()">
+        <img src="./assets/back.svg" />
+        <h3>Back to Cart</h3>
+    </header>
+    <main>
+        <div class="signingContainer">
+            <div class="item signUp">
+                <form onsubmit="createUser(event)">
+                    <span class="name">
+                        <span>
+                            <label for="fname">First Name<span class="required">*</span></label>
+                            <input id="fname" type="text" placeholder="Enter First name" />
+                            <p class="errorText" id="fnameError"></p>
+                        </span>
+                        <span>
+                            <label for="lname">Last Name<span class="required">*</span></label>
+                            <input id="lname" type="text" placeholder="Enter last name" />
+                            <p class="errorText" id="lnameError"></p>
+                        </span>
+                    </span>
+                    <span class="email">
+                        <label for="email">Email<span class="required">*</span></label>
+                        <input id="email" type="email" placeholder="enter email">
+                        <p class="errorText" id="emailError"></p>
+                    </span>
+                    <!-- <span class="address">
+                            <label for="address">Address</label>
+                            <input id="address"/>
+                        </span> -->
+                    <span class="password">
+                        <label for="password">Password<span class="required">*</span></label>
+                        <input id="password" type="password" placeholder="enter password" />
+                        <p class="errorText" id="passwordError"></p>
+                    </span>
+                    <span class="password">
+                        <label for="rePassword">Re-Enter Password<span class="required">*</span></label>
+                        <input id="rePassword" type="password" placeholder="re enter password" />
+                        <p class="errorText" id="rePasswordError"></p>
+                    </span>
+                    <div class="btnContainer">
+                        <button class="checkoutBt-dark">
+                            sign up
+                        </button>
+                    </div>
+                    <div class="redirection" onclick="goToLogin()">
+                        Already have an account please <span>log in</span>
+                    </div>
+                </form>
+            </div>
+            <div class="item login">
+                <form onsubmit="loginUser(event)">
+                    <span class="email">
+                        <label for="loginEmail">Email<span class="required">*</span></label>
+                        <input id="loginEmail" type="email" placeholder="Enter Email ID">
+                        <p class="errorText" id="loginEmailError"></p>
+                    </span>
+                    <span class="password">
+                        <label for="loginPassword">Password<span class="required">*</span></label>
+                        <input id="loginPassword" type="password" placeholder="Enter Password" />
+                        <p class="errorText" id="loginErrorPassword"></p>
+                    </span>
+                    <p class="errorText" id="noUser"></p>
+                    <div class="btnContainer">
+                        <button class="checkoutBt-dark">
+                            Login
+                        </button>
+                    </div>
+
+                    <div class="redirection" onclick="goToSignUp()">
+                        Don't have account? please <span>sign up</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="./userSignUp.js"></script>
+</body>
+
+</html>

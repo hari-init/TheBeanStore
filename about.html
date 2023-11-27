@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bean Store</title>
+    <link rel="icon" type="image/svg+xml" href="./coffee-cup.svg" sizes="any">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <!--Navigation with plain routing-->
+        <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./products.html">PRODUCTS</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+        </ul>
+        <div>
+            <div class="cart-icon" onclick="goToCart()">
+                <span class="items-count">0</span>
+                <img src="./assets/cart.svg" />
+            </div>
+            <img src="./assets/user.svg" />
+        </div>
+    </nav>
+    <main class="about-container">
+        <section class="intro">
+            <img src="./assets/coffee-cup.svg" />
+            <span>
+                <p>
+                    Welcome to The Bean Store ☕️, where every cup tells a story. Founded in 2023 🎉, our
+                    journey began with a simple idea: to create a space where coffee lovers could gather, unwind, and
+                    savor the finest brews. What started as a dream ☁️ has now blossomed into a thriving coffee
+                    community.
+                </p>
+            </span>
+        </section>
+        <section class="mission">
+            <img src="./assets/coffee-beans.svg" />
+            <span>
+                <p>
+                    At The Dean Store, our mission is clear: to craft exceptional coffee experiences that
+                    inspire and delight. We are fueled by a passion for quality ☕️, sustainability 🌱, and community 🤝.
+                    Our values are deeply rooted in the belief that every cup should be a moment of joy 😊, and every
+                    sip should reflect the dedication we have to our craft.
+                </p>
+            </span>
+        </section>
+        <section class="quality">
+            <img src="./assets/quality.svg" />
+            <span>
+                <p>
+                    Our commitment to quality begins with the beans we source. We meticulously select the finest coffee
+                    beans from around the world 🌍, ensuring each cup is a symphony of flavors 🎶. From the precise
+                    roasting
+                    process to the artful brewing techniques, we pour our passion into every aspect of creating the
+                    perfect
+                    cup of coffee.
+                </p>
+            </span>
+        </section>
+        <section class="connection">
+            <img src="./assets/chat.svg" />
+            <span>
+                <p>
+                    Beyond coffee, The Bean Store is a proud member of the Brantford community. We believe in
+                    giving back and being an active participant in the places we call home 🏡. From hosting local events
+                    🎉 to supporting neighborhood initiatives, we're dedicated to making a positive impact.
+                </p>
+            </span>
+        </section>
+        <section class="team">
+            <img src="./assets/team.svg" />
+            <span>
+                <p>
+                    Behind the scenes, a team of coffee enthusiasts ☕️ drives the magic at The Bean Store. Meet
+                    Hariharan 👩‍🍳, the visionary behind our coffee haven, whose love for coffee inspired this
+                    journey. Then there's Priya 🎨, our resident coffee artist, expertly crafting each cup
+                    with precision and flair. Together, we are a team united by our love for great coffee and the joy it
+                    brings to our customers.
+                </p>
+            </span>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="nav-sec">
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./products.html">PRODUCTS</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="nav-social">
+            <!--This SVGs are taken from the open source library
+            to represent the social banners -->
+
+            <!--ref: https://icon-sets.iconify.design/simple-icons/x/-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584l-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+            </svg>
+
+            <!--ref: https://icon-sets.iconify.design/basil/facebook-outline/--> <svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+
+            <!--ref: https://icon-sets.iconify.design/fe/instagram/-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37zm1.5-4.87h.01" />
+                </g>
+            </svg>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="./index.js"></script>
+
+</html>
